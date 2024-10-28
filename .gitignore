@@ -27,3 +27,4 @@ training_data/
 .viminfo
 .wget-hsts
 .test.py
+.gitconfig
