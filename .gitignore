@@ -20,7 +20,8 @@ nltk_data/
 training_data/
 .bash_history
 .bash_logout
-.lessht
+.bashrc
+.lesshst
 .netrc
 .profile
 .viminfo
