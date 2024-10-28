@@ -4,8 +4,7 @@ from pydub import AudioSegment
 base_path = "/home/victoria/training_data"
 
 folders = [
-    "foldereid_data", "gauldal_data", "namdalen_data", "oppdal_data", 
-    "oppdal_data_ndc", "trondheim_data", "trondheim_data_ndc", "vikna_data"
+    "combined_training_data"
 ]
 
 total_duration = 0
