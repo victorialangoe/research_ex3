@@ -1,3 +1,6 @@
 [submodule "Matcha-TTS"]
 	path = Matcha-TTS
 	url = https://github.com/victorialangoe/Matcha-TTS.git
+[submodule "IMS-Toucan"]
+	path = IMS-Toucan
+	url = https://github.com/victorialangoe/IMS-Toucan.git
