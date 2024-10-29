@@ -1,12 +1,16 @@
 import csv
 import re
+import os
 
 input_csv_path = "/home/victoria/training_data/combined_training_data/combined_training_data.csv"
 output_csv_path = "/home/victoria/training_data/combined_training_data/combined_training_data_cleaned.csv"
+new_audio_directory = "/home/victoria/training_data/combined_training_data/resampled_sound_clips"
 
-def clean_transcription(transcription):
-    cleaned_text = re.sub(r'\s+', ' ', transcription).strip()
-    return cleaned_text.replace('#', '')
+def clean_text(text):
+    text = re.sub(r'[^A-Za-zÆØÅæøå\s]', '', text)
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
 
 with open(input_csv_path, mode='r', encoding='utf-8') as input_file, \
      open(output_csv_path, mode='w', newline='', encoding='utf-8') as output_file:
@@ -17,7 +21,15 @@ with open(input_csv_path, mode='r', encoding='utf-8') as input_file, \
     writer.writeheader()
     
     for row in reader:
-        row['transcription'] = clean_transcription(row['transcription'])
+        # Update the audio path to point to the new directory
+        old_audio_path = row['audio_path']
+        new_audio_path = os.path.join(new_audio_directory, os.path.basename(old_audio_path))
+        row['audio_path'] = new_audio_path
+
+        # Clean the transcription text
+        row['transcription'] = clean_text(row['transcription'])
+        
+        # Write the cleaned row to the output file
         writer.writerow(row)
 
 print("CSV file cleaned and saved to", output_csv_path)

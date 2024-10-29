@@ -17,7 +17,7 @@ os.makedirs(combined_sound_clips_path, exist_ok=True)
 
 with open(combined_csv_path, mode='w', newline='', encoding='utf-8') as combined_csv_file:
     writer = csv.writer(combined_csv_file, delimiter='|')
-    writer.writerow(["audio_path", "transcription", "speaker"])  # Write header
+    writer.writerow(["audio_path", "transcription", "speaker"])  
 
     seen_files = set()
 
