@@ -2,8 +2,8 @@ import os
 import librosa
 import soundfile as sf
 
-input_directory = "/home/victoria/training_data/combined_training_data/sound_clips"
-output_directory = "/home/victoria/training_data/combined_training_data/resampled_sound_clips"
+input_directory = "/home/victoria/training_data/combined_training_data_rogaland/sound_clips"
+output_directory = "/home/victoria/training_data/combined_training_data_rogaland/resampled_sound_clips"
 os.makedirs(output_directory, exist_ok=True)
 
 target_sr = 22050

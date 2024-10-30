@@ -5,11 +5,11 @@ import shutil
 base_path = "/home/victoria/training_data"
 
 folders = [
-    "foldereid_data", "gauldal_data", "namdalen_data", "oppdal_data", 
-    "oppdal_data_ndc", "trondheim_data", "trondheim_data_ndc", "vikna_data"
+    "aasane_data","arna_data","bergen_data","bergen_data_ndc","boemlo_data","boemlo_data_ndc",
+    "kalvaag_data","kvinnherad_data","fana_data","laksevaag_data"
 ]
 
-combined_path = os.path.join(base_path, "combined_training_data")
+combined_path = os.path.join(base_path, "combined_training_data_rogaland")
 combined_sound_clips_path = os.path.join(combined_path, "sound_clips")
 combined_csv_path = os.path.join(combined_path, "combined_training_data.csv")
 
@@ -62,7 +62,7 @@ with open(combined_csv_path, mode='w', newline='', encoding='utf-8') as combined
                     print(f"File {original_wav_path} not found. Skipping.")
                     continue
                 
-                new_audio_path = f"/home/victoria/training_data/combined_training_data/sound_clips/{file_name}"
+                new_audio_path = f"/home/victoria/training_data/combined_training_data_rogaland/sound_clips/{file_name}"
                 writer.writerow([new_audio_path, row["transcription"], row["speaker"]])
 
 print("Data combined successfully into combined_training_data folder.")

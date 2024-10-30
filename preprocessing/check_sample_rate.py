@@ -1,7 +1,7 @@
 import os
 import wave
 
-directory = "/home/victoria/training_data/combined_training_data/resampled_sound_clips"
+directory = "/home/victoria/training_data/combined_training_data_rogaland/resampled_sound_clips"
 
 unique_sample_rates = set()
 
