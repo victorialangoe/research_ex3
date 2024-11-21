@@ -1,10 +1,10 @@
 # Define the range of valid speaker IDs
-VALID_SPEAKER_IDS = range(39)
+VALID_SPEAKER_IDS = range(56)
 
 # File paths to check
 file_paths = [
-    "/home/victoria/training_data/combined_training_data/matcha_training_data/matcha_data_train.txt",
-    "/home/victoria/training_data/combined_training_data/matcha_training_data/matcha_data_val.txt"
+    "/home/victoria/training_data/combined_training_data_rogaland/matcha_training_data_rogaland/matcha_data_train.txt",
+    "/home/victoria/training_data/combined_training_data_rogaland/matcha_training_data_rogaland/matcha_data_val.txt"
 ]
 
 # Function to parse and check each line for speaker ID consistency
